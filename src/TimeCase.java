@@ -5,7 +5,7 @@
  */
 public class TimeCase {
     public static void main(String[] args) {
-        changeTime("1:00");
+        changeTime("11:59");
     }
 
     private static void changeTime(String s) {
@@ -27,8 +27,9 @@ public class TimeCase {
     }
 
     private static boolean cheak(String s) {
-//         String regex ="^\b\w{6}[0-24];";
-//        return s.matches(regex);
-        return  true;
+         String regex ="^[0-2][0-9]:[0-5][0-9]$";
+//         String regex ="^\\d{2}:\\d{2}$";
+        return s.matches(regex);
+//        return  true;
     }
 }
